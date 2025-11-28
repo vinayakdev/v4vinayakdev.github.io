@@ -1,4 +1,5 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
+import tailwindcss from "@tailwindcss/vite";
 export default defineNuxtConfig({
   modules: [
     '@nuxt/eslint',
@@ -9,6 +10,12 @@ export default defineNuxtConfig({
     'nuxt-og-image',
     'motion-v/nuxt'
   ],
+
+  vite: {
+    plugins: [
+      tailwindcss(),
+    ],
+  },
 
   devtools: {
     enabled: true
